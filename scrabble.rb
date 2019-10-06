@@ -16,7 +16,7 @@ E.g. word_ranking('reshow the shower') -> 'reshow'
 =end
 
 def word_ranking(str)
-    
+    #define a hash with value assigned to each alphabet
     alnum={ "a"=> 1, 
             "b"=> 2,
             "c"=> 3,
@@ -45,22 +45,23 @@ def word_ranking(str)
             "z"=> 26
         }
         total=[]
+     str=str.downcase #convert the argument string into lowercase
+    strsplit=str.split(" ") # break the string into an array of words
 
-    str=str.downcase
-    strsplit=str.split(" ")
         
     for i in strsplit
-        strstrsplit=i.split("")
+        strstrsplit=i.split("") #break each word of the string into an array of individual characters
         tot=0
         for item in strstrsplit
             tot+=alnum[item]
             
         end
-        total.push(tot)
+        total.push(tot) #to generate an array of numbers from the string argument
     end
     
-    index1= total.index(total.max)
-    if str.length==0
+    index1= total.index(total.max) #to get the index of the biggest number in the array
+    
+    if str.length==0 # to get correct result if the method argument was an empty string
         return ''
     else
         return strsplit[index1]
