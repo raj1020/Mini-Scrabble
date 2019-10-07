@@ -18,35 +18,7 @@ E.g. word_ranking('reshow the shower') -> 'reshow'
 def word_ranking(str)
     #define a hash with value assigned to each alphabet
     alnum=(('a'..'z').to_a.zip (1..26).to_a).to_h
-=begin
-    alnum={ "a"=> 1, 
-            "b"=> 2,
-            "c"=> 3,
-            "d"=> 4,
-            "e"=> 5,
-            "f"=> 6,
-            "g"=> 7,
-            "h"=> 8,
-            "i"=> 9,
-            "j"=> 10,
-            "k"=> 11,
-            "l"=> 12,
-            "m"=> 13,
-            "n"=> 14,
-            "o"=> 15,
-            "p"=> 16,
-            "q"=> 17,
-            "r"=> 18,
-            "s"=> 19,
-            "t"=> 20,
-            "u"=> 21,
-            "v"=> 22,
-            "w"=> 23,
-            "x"=> 24,
-            "y"=> 25,
-            "z"=> 26
-        }
-=end
+
         total=[]
      str=str.downcase #convert the argument string into lowercase
     strsplit=str.split(" ") # break the string into an array of words
